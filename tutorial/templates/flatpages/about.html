@@ -4,9 +4,18 @@
 <title>{{ flatpage.title }}</title>
 </head>
 <body>
+
+    {% block navigation %} <a href="/about/">about</a> <a href="/contacts/">contacts</a> <a href="/production/">production</a> {% endblock navigation %}
+
+    {% block title %}
     <h2>{{ flatpage.title }}</h2>
+    {% endblock title %}
+
     <hr>
-    <h2>Наша деядельность:</h2>
-    <h3>Наша контора занимается приёмом рогов и копыт у населения</h3>
+
+    {% block content %}
+    {{ flatpage.content }}
+    {% endblock content %}
+
 </body>
 </html>
