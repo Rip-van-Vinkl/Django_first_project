@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>{{ flatpage.title }}</title>
-</head>
-<body>
-
+    
+    
     {% extends 'flatpages/default.html' %}
+
+    {{ flatpage.title }}
 
     {% block navigation %} <a href="/about/">about</a> <a href="/contacts/">contacts</a> <a href="/production/">production</a> {% endblock navigation %}
 
@@ -18,6 +15,3 @@
     {% block content %}
     {{ flatpage.content }}
     {% endblock content %}
-
-</body>
-</html>
